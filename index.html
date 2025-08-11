@@ -1,84 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Pizza</title>
 </head>
-<body>
-    <h1>Pizza Order Form</h1>
-    <form>
-        <div>
-            <label for="fname">First Name: </label>
-            <input type="text" name="fname" id=""><br>
+<body class="bg-light">
 
-            <label for="lname">Last Name: </label>
-            <input type="text" name="lname" id=""><br>
+  <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="card shadow p-4 w-100" style="max-width: 600px;">
+      <div class="card-body">
+        <h1 class="card-title text-center mb-4">Pizza Order Form</h1>
+        
+        <form>
+          <div class="mb-3">
+            <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+          </div>
 
-            <label for="email">Email: </label>
-            <input type="email" name="email" id=""><br>
+          <div class="mb-3">
+            <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+          </div>
 
-            <label for="contact">Contact No: </label>
-            <input type="tel" name="" id=""><br>
-            
-            <label for="date">Preferred Delivery Date: </label>
-            <input type="date" name="" id=""><br>
+          <div class="mb-3">
+            <input type="email" name="email" class="form-control" placeholder="Email" required>
+          </div>
 
-        </div>
-        <div>
-            <h3>Size:</h3>
-            <label for="small"><input type="radio" name="small" id="s"> Small</label>
-            
-            <label for="medium"><input type="radio" name="small" id="m">Medium</label>
-            
-            <label for="large"><input type="radio" name="small" id="l">Large</label>
-            
-        </div>
+          <div class="mb-3">
+            <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+          </div>
 
-        <div>
-            <h4>Flavor:</h4>
-            <label for="hawaiian">
-                <input type="checkbox" name="hawaiian" id="">Hawaiian (Php 150)
-                <select name="hawaiian" id="">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
+          <div class="mb-3">
+            <input type="date" name="date" class="form-control">
+          </div>
+
+          <h5>Size:</h5>
+          <div class="mb-3">
+            <label><input type="radio" name="size" value="Small"> Small</label><br>
+            <label><input type="radio" name="size" value="Medium"> Medium</label><br>
+            <label><input type="radio" name="size" value="Large"> Large</label>
+          </div>
+
+          <h5>Flavor:</h5>
+          <div class="mb-3">
+            <label>
+              <input type="checkbox" name="flavor_hawaiian"> Hawaiian (Php 150)
+              <select name="qty_hawaiian">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </label><br>
+            <label>
+              <input type="checkbox" name="flavor_pepperoni"> Pepperoni (Php 140)
+              <select name="qty_pepperoni">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </label><br>
+
+            <label>
+              <input type="checkbox" name="flavor_vegetable"> Vegetable (Php 120)
+              <select name="qty_vegetable">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
             </label>
-            <br>
-            <label for="Pepperoni">
-                <input type="checkbox" name="Pepperoni" id="">Pepperoni (Php 140)
-                <select name="vegetable" id="">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </label>
-            <br>
-            <label for="Vegetable">
-                <input type="checkbox" name="Vegetable" id="">Vegetable (Php 120)
-                <select name="vegetable" id="">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </label>
-        </div>
-        <br>
-        <div>
-            <label for="credit">Credit number: <input type="tel" name="" id=""></label>
-            <br>
-            <label for="pin">PIN: <input type="password" name="" id=""></label><br>
-            <label for="">Additional Note:</label><br>
-            <textarea name="Additional" id=""></textarea>
-        </div>
-        <input type="submit" name="" id="">
-    </form>
+          </div>
+>
+          <div class="mb-3">
+            <label>Credit Number</label>
+            <input type="tel" name="credit_number" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label>PIN</label>
+            <input type="password" name="pin" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label>Additional Note</label>
+            <textarea name="note" class="form-control"></textarea>
+          </div>
+
+          <div class="d-grid">
+            <input type="submit" class="btn btn-primary" value="Place Order">
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>
